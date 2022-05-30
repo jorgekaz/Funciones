@@ -37,7 +37,7 @@ int main(){
         system("cls");
         switch(opt){
         case 1:{
-            printf(" 1.Hacer una función que permita ingresar varios elementos a una Pila, tantos como quiera el usuario.\n\n");
+            printf(" 1.Hacer una funciÃ³n que permita ingresar varios elementos a una Pila, tantos como quiera el usuario.\n\n");
             ingresar(&main);
             mostrar(&main);
             system("pause");
@@ -45,7 +45,7 @@ int main(){
         }
         break;
         case 2:{
-            printf(" 2.Hacer una función que pase todos los elementos de una pila a otra.\n\n");
+            printf(" 2.Hacer una funciÃ³n que pase todos los elementos de una pila a otra.\n\n");
             pasarPila(&main, &aux);
             mostrar(&aux);
             system("pause");
@@ -53,7 +53,7 @@ int main(){
         }
         break;
         case 3:{
-            printf(" 3.Hacer una función que pase todos los elementos de una pila a otra, pero conservando el orden. \n\n");
+            printf(" 3.Hacer una funciÃ³n que pase todos los elementos de una pila a otra, pero conservando el orden. \n\n");
             pasarPilaMismOrden(&main, &aux);
             mostrar(&aux);
             system("pause");
@@ -61,7 +61,7 @@ int main(){
         }
         break;
         case 4:{
-            printf(" 4.Hacer una función que encuentre el menor elemento de una pila y lo retorne. La misma debe eliminar ese dato de la pila.\n\n");
+            printf(" 4.Hacer una funciÃ³n que encuentre el menor elemento de una pila y lo retorne. La misma debe eliminar ese dato de la pila.\n\n");
             int menorElemento=0;
             menorElemento = eliminarMenorElemento(&main);
             mostrar(&main);
@@ -71,7 +71,7 @@ int main(){
         }
         break;
         case 5:{
-            printf(" 5.Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la función del ejercicio 4. (Ordenamiento por selección)\n\n");
+            printf(" 5.Hacer una funciÃ³n que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la funciÃ³n del ejercicio 4. (Ordenamiento por selecciÃ³n)\n\n");
             pasarPilaOrdenada(&main, &aux);
             mostrar(&aux);
             system("pause");
@@ -79,7 +79,7 @@ int main(){
         }
         break;
         case 6:{
-            printf(" 6.Hacer una función que inserte en una pila ordenada un nuevo elemento, conservando el orden de ésta. \n\n");
+            printf(" 6.Hacer una funciÃ³n que inserte en una pila ordenada un nuevo elemento, conservando el orden de Ã©sta. \n\n");
             fflush(stdin);
             insertarOrdenado(&main, &aux);
             mostrar(&main);
@@ -88,7 +88,7 @@ int main(){
         }
         break;
         case 7:{
-            printf(" 7.Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la función del ejercicio 6.  (Ordenamiento por inserción)\n\n");
+            printf(" 7.Hacer una funciÃ³n que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la funciÃ³n del ejercicio 6.  (Ordenamiento por inserciÃ³n)\n\n");
             crearPilaOrdenada(&main, &ordenada);
             mostrar(&ordenada);
             system("pause");
@@ -96,7 +96,7 @@ int main(){
         }
         break;
         case 8:{
-            printf(" 8.Hacer una función que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido. \n\n");
+            printf(" 8.Hacer una funciÃ³n que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido. \n\n");
             sumarDosElementos(&ordenada);
             mostrar(&ordenada);
             printf(" LA SUMA DE LOS ELEMENTOS ES DE: %i\n\n", sumarDosElementos(&ordenada));
@@ -105,7 +105,7 @@ int main(){
         }
         break;
         case 9:{
-            printf(" 9.Hacer una función que calcule el promedio de los elementos de una pila, para ello hacer también una función que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones, y la función que calcula el promedio invoca a las otras 3.\n\n");
+            printf(" 9.Hacer una funciÃ³n que calcule el promedio de los elementos de una pila, para ello hacer tambiÃ©n una funciÃ³n que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones, y la funciÃ³n que calcula el promedio invoca a las otras 3.\n\n");
             mostrar(&ordenada);
             promedio(&ordenada);
             printf("LA SUMA DE LOS ELEMENTOS DE LA PILA ES DE: %i\n", sumar(&ordenada));
@@ -116,7 +116,7 @@ int main(){
         }
         break;
         case 10:{
-            printf(" 10.Hacer una función que reciba una pila con números de un solo dígito (es responsabilidad de quien usa el programa) y que transforme esos dígitos en un número decimal. Por ejemplo, la pila: \n\n");
+            printf(" 10.Hacer una funciÃ³n que reciba una pila con nÃºmeros de un solo dÃ­gito (es responsabilidad de quien usa el programa) y que transforme esos dÃ­gitos en un nÃºmero decimal. Por ejemplo, la pila: \n\n");
             ingresar(&main);
             mostrar(&main);
             numeroDecimal(&main);
@@ -144,7 +144,7 @@ int main(){
 }
 
 /// FUNCIONES
-///1. Hacer una función que permita ingresar varios elementos a una pila, tanto como quiera el usuario.
+///1. Hacer una funciÃ³n que permita ingresar varios elementos a una pila, tanto como quiera el usuario.
 void ingresar(Pila* pilaMain){
     char opt;
     int valor;
@@ -160,7 +160,7 @@ void ingresar(Pila* pilaMain){
     printf(" PILA ORIGINAL\n");
 }
 
-///2. Hacer una función que pase todos los elementos de una pila a otra
+///2. Hacer una funciÃ³n que pase todos los elementos de una pila a otra
 void pasarPila(Pila* pilaMain, Pila* aux){
     while(!pilavacia(pilaMain)){
         apilar(aux,desapilar(pilaMain));
@@ -168,7 +168,7 @@ void pasarPila(Pila* pilaMain, Pila* aux){
     printf(" PILA SECUNDARIA\n");
 }
 
-///3. Hacer una función que pase todos los elementos de una pila a otra, pero conservando el orden.
+///3. Hacer una funciÃ³n que pase todos los elementos de una pila a otra, pero conservando el orden.
 void pasarPilaMismOrden(Pila* pilaMain, Pila* aux2){
     Pila funcion3;
     inicpila(&funcion3);
@@ -181,7 +181,7 @@ void pasarPilaMismOrden(Pila* pilaMain, Pila* aux2){
     printf(" PILA SECUNDARIA MISMO ORDEN\n");
 }
 
-///4. Hacer una función que encuentre el menor elemento de una pila y lo retorna.
+///4. Hacer una funciÃ³n que encuentre el menor elemento de una pila y lo retorna.
 ///La misma debe eliminar ese dato de la pila.
 int eliminarMenorElemento(Pila* pilaMain){
     Pila aux3;
@@ -214,7 +214,7 @@ void pasarPilaOrdenada(Pila* pilaMain, Pila* aux3){
     }
 }
 
-///6.Hacer una función que inserta en una pila ordenada un nuevo elemento, conservando el orden de ésta.
+///6.Hacer una funciÃ³n que inserta en una pila ordenada un nuevo elemento, conservando el orden de Ã©sta.
 void insertarOrdenado(Pila* pilaMain, Pila* elemento){
     Pila funcion6;
     inicpila(&funcion6);
@@ -229,14 +229,14 @@ void insertarOrdenado(Pila* pilaMain, Pila* elemento){
     }
 }
 
-///7.Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila
-///  ordenada. Usar la función del ejercicio 6. (Ordenamiento por inserción)
+///7.Hacer una funciÃ³n que pase los elementos de una pila a otra, de manera que se genere una nueva pila
+///  ordenada. Usar la funciÃ³n del ejercicio 6. (Ordenamiento por inserciÃ³n)
 void crearPilaOrdenada(Pila* pilaMain, Pila* desordenada){
     insertarOrdenado(pilaMain, desordenada);
     pasarPilaMismOrden(pilaMain, desordenada);
 }
 
-///8.Hacer una función que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido.
+///8.Hacer una funciÃ³n que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido.
 int sumarDosElementos(Pila* pilaMain){
     int suma=0;
     int count=0;
@@ -254,9 +254,9 @@ int sumarDosElementos(Pila* pilaMain){
     return suma;
 }
 
-/// 9. Hacer una función que calcule el promedio de los elementos de una pila, para ello hacer también una
-/// función que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones,
-/// y la función que calcula el promedio invoca a las otras 3.
+/// 9. Hacer una funciÃ³n que calcule el promedio de los elementos de una pila, para ello hacer tambiÃ©n una
+/// funciÃ³n que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones,
+/// y la funciÃ³n que calcula el promedio invoca a las otras 3.
 float promedio(Pila* pilaMain){
     float promedio;
     promedio = (float)sumar(pilaMain)/cantidad(pilaMain);
@@ -289,8 +289,8 @@ int cantidad(Pila* pilaMain){
     return elementos;
 }
 
-/// 10.Hacer una función que reciba una pila con números de un solo dígito (es responsabilidad de quien usa el programa)
-/// y que transforme esos dígitos en un número decimal. Por ejemplo, la pila:
+/// 10.Hacer una funciÃ³n que reciba una pila con nÃºmeros de un solo dÃ­gito (es responsabilidad de quien usa el programa)
+/// y que transforme esos dÃ­gitos en un nÃºmero decimal. Por ejemplo, la pila:
 void cargarPila(Pila* pilaMain){
     char opt;
     int valor;
@@ -333,76 +333,21 @@ float numeroDecimal(Pila* pilaMain){
 int menu(){
     int opt;
         printf("\n================================\n");
-        printf(" TRABAJO PRACTICO N° 3: FUNCIONES\n");
+        printf(" TRABAJO PRACTICO NÂ° 3: FUNCIONES\n");
         printf("=================================\n\n");
-        printf(" 1.Hacer una función que permita ingresar varios elementos a una Pila, tantos como quiera el usuario.\n\n");
-        printf(" 2.Hacer una función que pase todos los elementos de una pila a otra.\n\n");
-        printf(" 3.Hacer una función que pase todos los elementos de una pila a otra, pero conservando el orden. \n\n");
-        printf(" 4.Hacer una función que encuentre el menor elemento de una pila y lo retorne. La misma debe eliminar ese dato de la pila.\n\n");
-        printf(" 5.Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la función del ejercicio 4. (Ordenamiento por selección)\n\n");
-        printf(" 6.Hacer una función que inserte en una pila ordenada un nuevo elemento, conservando el orden de ésta. \n\n");
-        printf(" 7.Hacer una función que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la función del ejercicio 6.  (Ordenamiento por inserción)\n\n");
-        printf(" 8.Hacer una función que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido. \n\n");
-        printf(" 9.Hacer una función que calcule el promedio de los elementos de una pila, para ello hacer también una función que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones, y la función que calcula el promedio invoca a las otras 3.\n\n");
-        printf(" 10.Hacer una función que reciba una pila con números de un solo dígito (es responsabilidad de quien usa el programa) y que transforme esos dígitos en un número decimal. Por ejemplo, la pila: \n\n");
+        printf(" 1.Hacer una funciÃ³n que permita ingresar varios elementos a una Pila, tantos como quiera el usuario.\n\n");
+        printf(" 2.Hacer una funciÃ³n que pase todos los elementos de una pila a otra.\n\n");
+        printf(" 3.Hacer una funciÃ³n que pase todos los elementos de una pila a otra, pero conservando el orden. \n\n");
+        printf(" 4.Hacer una funciÃ³n que encuentre el menor elemento de una pila y lo retorne. La misma debe eliminar ese dato de la pila.\n\n");
+        printf(" 5.Hacer una funciÃ³n que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la funciÃ³n del ejercicio 4. (Ordenamiento por selecciÃ³n)\n\n");
+        printf(" 6.Hacer una funciÃ³n que inserte en una pila ordenada un nuevo elemento, conservando el orden de Ã©sta. \n\n");
+        printf(" 7.Hacer una funciÃ³n que pase los elementos de una pila a otra, de manera que se genere una nueva pila ordenada. Usar la funciÃ³n del ejercicio 6.  (Ordenamiento por inserciÃ³n)\n\n");
+        printf(" 8.Hacer una funciÃ³n que sume y retorne los dos primeros elementos de una pila (tope y anterior), sin alterar su contenido. \n\n");
+        printf(" 9.Hacer una funciÃ³n que calcule el promedio de los elementos de una pila, para ello hacer tambiÃ©n una funciÃ³n que calcule la suma, otra para la cuenta y otra que divida. En total son cuatro funciones, y la funciÃ³n que calcula el promedio invoca a las otras 3.\n\n");
+        printf(" 10.Hacer una funciÃ³n que reciba una pila con nÃºmeros de un solo dÃ­gito (es responsabilidad de quien usa el programa) y que transforme esos dÃ­gitos en un nÃºmero decimal. Por ejemplo, la pila: \n\n");
         printf(" 11.SALIR\n\n");
-        printf("\n ELIJA UNA OPCIÓN: ");
+        printf("\n ELIJA UNA OPCIÃ“N: ");
         fflush(stdin);
         scanf("%i", &opt);
         return opt;
 }
-
-
-
-
-
-
-
-//int main()
-//{
-//
-//            Pila main;
-//            inicpila(&main);
-//            Pila aux;
-//            inicpila(&aux);
-//            Pila ordenada;
-//            inicpila(&ordenada);
-////
-////            printf("FUNCION 1\n");
-//    ingresar(&main);
-//    mostrar(&main);
-////            printf("\nFUNCION 2\n");
-////    pasarPila(&main, &aux);
-////    mostrar(&aux);
-//printf("\nFUNCION 3\n");
-////    pasarPilaMismOrden(&main, &aux);
-////    mostrar(&aux);
-//printf("FUNCION 4\n");
-////    int menorElemento=0;
-////    menorElemento = eliminarMenorElemento(&main);
-////    mostrar(&main);
-////    printf("EL MENOR ELEMENTO ELIMINADO ES: %i\n", menorElemento);
-//printf("FUNCION 5\n");
-////    pasarPilaOrdenada(&main, &aux);
-////    mostrar(&aux);
-//    printf("FUNCION 6\n");
-//    fflush(stdin);
-//    insertarOrdenado(&main, &aux);
-//    mostrar(&main);
-//printf("FUNCION 7\n");
-//    crearPilaOrdenada(&main, &ordenada);
-//    mostrar(&ordenada);
-//printf("FUNCION 8\n");
-//    sumarDosElementos(&main);
-//    mostrar(&main);
-//    printf("\nLA SUMA DE LOS ELEMENTOS ES DE: %i\n", sumarDosElementos(&main));
-//printf("FUNCION 9\n");
-//    promedio(&main);
-//    printf("LA SUMA DE LOS ELEMENTOS DE LA PILA ES DE: %i\n", sumar(&main));
-//    printf("LA CANTIDAD DE ELEMENTOS DE LA PILA ES DE: %i\n", cantidad(&main));
-//    printf("EL PROMEDIO DE LOS ELEMENTOS DE LA PILA ES DE: %.2f\n", promedio(&main));
-//printf("FUNCION 10\n");
-//cargarPila(&main);
-//mostrar(&main);
-//numeroDecimal(&main);
-//}
